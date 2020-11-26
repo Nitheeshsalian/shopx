@@ -59,12 +59,15 @@ function Main() {
       return (
         <div key={index} className="rowitem">
           <div className="firstitem">
-            <input
-              name="isGoing"
-              type="checkbox"
-              checked={item.completed}
-              onChange={() => onChange(index)}
-            />
+            <div class="round" onClick={() => onChange(index)}>
+              <input
+                type="checkbox"
+                id="checkbox"
+                checked={item.completed}
+                onChange={() => onChange(index)}
+              />
+              <label for="checkbox"></label>
+            </div>
             <div
               className="name"
               style={{ textDecoration: item.completed ? "line-through" : null }}
